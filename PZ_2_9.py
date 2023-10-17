@@ -1,8 +1,17 @@
 '''Даны целые положительные числа А и В (А > В). На отрезке длины А
-размещено максимально возможное количество отрезков длины В (без наложений).
+размещено максимально возможное количество отрезков длины В.
 Используя операцию деления нацело, найти количество отрезков В, размещенных на отрезке А.'''
 
-otrezokA = int(input("Vvedite dlinu otrezka A: "))
-otrezokB = int(input("Vvedite dlinu otrezka B: "))
-kolichestvo = otrezokA // otrezokB
-print(f"Kolichestvo otrezkov B v otrezke A: {kolichestvo}")
+
+
+def count_segments(A, B):
+    return A // B
+
+A = int(input("Введите длину отрезка A: "))
+B = int(input("Введите длину отрезка B: "))
+
+if A > B:
+    result = count_segments(A, B)
+    print("Количество отрезков В, размещенных на отрезке А:", result)
+else:
+    print("Условие А > B не выполняется.")
