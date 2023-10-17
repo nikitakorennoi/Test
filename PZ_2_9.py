@@ -7,11 +7,14 @@
 def count_segments(A, B):
     return A // B
 
-A = int(input("Введите длину отрезка A: "))
-B = int(input("Введите длину отрезка B: "))
+try:
+ A = int(input("Введите длину отрезка A: "))
+ B = int(input("Введите длину отрезка B: "))
 
-if A > B:
+ if A > B:
     result = count_segments(A, B)
     print("Количество отрезков В, размещенных на отрезке А:", result)
-else:
+ else:
     print("Условие А > B не выполняется.")
+except:
+   print('Введены неверные данные!')
